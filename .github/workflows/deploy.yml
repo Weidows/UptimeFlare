@@ -2,7 +2,7 @@ name: Deploy to Cloudflare
 
 on:
   push:
-    branches: ['main']
+    branches: ['main', 'weidows']
   workflow_dispatch:
 
 jobs:
@@ -41,7 +41,7 @@ jobs:
 
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      
+
       # This is a temporary workaround to fix issue #13
       # On a new Cloudflare account, the terraform apply will fail with `workers.api.error.subdomain_required`
       # This may be due to the account not having a worker subdomain yet, so we create a dummy worker and then delete it.
@@ -55,7 +55,7 @@ jobs:
                --header 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN \
                --header 'Content-Type: application/javascript' \
                --data 'addEventListener('\''fetch'\'', (event) => event.respondWith(new Response('\''OK'\'')))'\
-          
+
           curl --request DELETE --fail-with-body \
                --url https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/dummy-ib4db6ntj5csdef3 \
                --header 'Authorization: Bearer '$CLOUDFLARE_API_TOKEN \
@@ -66,6 +66,7 @@ jobs:
 
       - name: Install packages
         run: |
+          echo `${{ secrets.ENV_TS }}` > env.ts
           npm install
           cd worker
           npm install
