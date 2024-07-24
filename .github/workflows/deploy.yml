@@ -66,7 +66,7 @@ jobs:
 
       - name: Install packages
         run: |
-          echo `${{ secrets.ENV_TS }}` > env.ts
+          echo "${{ secrets.ENV_TS }}" > env.ts
           npm install
           cd worker
           npm install
