@@ -18,7 +18,7 @@ const workerConfig = {
   kvWriteCooldownMinutes: 3,
   // Define all your monitors here
   monitors: [
-    // Example HTTP Monitor
+    // // Example HTTP Monitor
     // {
     //   // `id` should be unique, history will be kept if the `id` remains constant
     //   id: 'foo_monitor',
@@ -49,7 +49,7 @@ const workerConfig = {
     //   // refer to docs https://github.com/lyc8503/UptimeFlare/wiki/Geo-specific-checks-setup before setting this value
     //   checkLocationWorkerRoute: 'https://xxx.example.com',
     // },
-    // Example TCP Monitor
+    // // Example TCP Monitor
     // {
     //   id: 'test_tcp_monitor',
     //   name: 'Example TCP Monitor',
@@ -61,41 +61,80 @@ const workerConfig = {
     //   statusPageLink: 'https://example.com',
     //   timeout: 5000,
     // },
+
+    // weidows.tech
+    // ========================================================================
     {
       id: 'home.weidows.tech',
       name: 'homepage',
       method: 'GET',
       target: 'https://home.weidows.tech',
+      statusPageLink: 'https://home.weidows.tech',
+    },
+    {
+      id: 'blog.weidows.tech',
+      name: 'blog.weidows.tech',
+      method: 'GET',
+      target: 'https://blog.weidows.tech',
+      statusPageLink: 'https://blog.weidows.tech',
     },
     {
       id: 'monitor.weidows.tech',
       name: 'monitor',
       method: 'GET',
       target: 'https://monitor.weidows.tech',
+      statusPageLink: 'https://monitor.weidows.tech',
     },
     {
       id: 'nav.weidows.tech',
       name: 'nav',
       method: 'GET',
       target: 'https://nav.weidows.tech',
+      statusPageLink: 'https://nav.weidows.tech',
     },
     {
       id: 'apprise.weidows.tech',
       name: 'apprise',
       method: 'GET',
       target: 'https://apprise.weidows.tech',
+      expectedCodes: [200, 404],
     },
-    // {
-    //   id: 'test_tcp_monitor',
-    //   name: 'Example TCP Monitor',
-    //   // `method` should be `TCP_PING` for tcp monitors
-    //   method: 'TCP_PING',
-    //   // `target` should be `host:port` for tcp monitors
-    //   target: '1.2.3.4:22',
-    //   tooltip: 'My production server SSH',
-    //   statusPageLink: 'https://example.com',
-    //   timeout: 5000,
-    // },
+    {
+      id: 'docker.hub.weidows.tech',
+      name: 'docker',
+      method: 'GET',
+      target: 'https://docker.hub.weidows.tech',
+      statusPageLink: 'https://docker.hub.weidows.tech',
+    },
+
+    // others
+    // ========================================================================
+    {
+      id: 'weidows.github.io',
+      name: 'weidows.github.io',
+      method: 'GET',
+      target: 'https://weidows.github.io',
+      statusPageLink: 'https://weidows.github.io',
+    },
+    {
+      id: 'weidows-projects.github.io/Keeper',
+      name: 'Keeper-ssl-check',
+      method: 'GET',
+      target: 'https://weidows-projects.github.io/Keeper/',
+      statusPageLink: 'https://weidows-projects.github.io/Keeper/',
+    },
+
+    // server
+    // ========================================================================
+    {
+      id: 'weidows@serv00',
+      name: 'serv00',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'TCP_PING',
+      // `target` should be `host:port` for tcp monitors
+      target: 's4.serv00.com:22',
+      timeout: 5000,
+    },
   ],
   notification: {
     // [Optional] apprise API server URL
