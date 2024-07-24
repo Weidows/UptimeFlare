@@ -99,12 +99,21 @@ const workerConfig = {
       target: 'https://apprise.weidows.tech',
       expectedCodes: [200, 404],
     },
+
+    // 自用代理
     {
       id: 'docker.hub.weidows.tech',
-      name: 'docker',
+      name: 'docker mirror',
       method: 'GET',
       target: 'https://docker.hub.weidows.tech',
       statusPageLink: 'https://docker.hub.weidows.tech',
+    },
+    {
+      id: 'bili.px.weidows.tech',
+      name: 'bili server',
+      method: 'GET',
+      target: 'https://bili.px.weidows.tech',
+      // statusPageLink: 'https://bili.px.weidows.tech',
     },
 
     // others
@@ -133,7 +142,7 @@ const workerConfig = {
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
       target: 's4.serv00.com:22',
-      timeout: 5000,
+      timeout: 10000,
     },
   ],
   notification: {
@@ -149,7 +158,7 @@ const workerConfig = {
     // [Optional] grace period in minutes before sending a notification
     // notification will be sent only if the monitor is down for N continuous checks after the initial failure
     // if not specified, notification will be sent immediately
-    gracePeriod: 1,
+    gracePeriod: 5,
   },
   callbacks: {
     onStatusChange: async (
