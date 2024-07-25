@@ -62,6 +62,7 @@ const workerConfig = {
     //   timeout: 5000,
     // },
 
+    // ========================================================================
     // weidows.tech
     // ========================================================================
     {
@@ -115,6 +116,7 @@ const workerConfig = {
     },
 
     // API
+    // ========================================================================
     {
       id: 'apprise.weidows.tech',
       name: 'apprise',
@@ -136,6 +138,7 @@ const workerConfig = {
     },
 
     // 自用代理
+    // ========================================================================
     {
       id: 'chatgpt.ai.weidows.tech',
       name: 'chatgpt',
@@ -155,7 +158,7 @@ const workerConfig = {
       name: 'docker mirror',
       method: 'GET',
       target: 'https://docker.hub.weidows.tech',
-      statusPageLink: 'https://docker.hub.weidows.tech',
+      // statusPageLink: 'https://docker.hub.weidows.tech',
     },
     {
       id: 'bili.px.weidows.tech',
@@ -184,14 +187,21 @@ const workerConfig = {
 
     // server
     // ========================================================================
+    // {
+    //   id: 'weidows@serv00',
+    //   name: 'serv00',
+    //   // `method` should be `TCP_PING` for tcp monitors
+    //   method: 'TCP_PING',
+    //   // `target` should be `host:port` for tcp monitors
+    //   target: 'web4.serv00.com:80',
+    //   timeout: 5000,
+    // },
     {
       id: 'weidows@serv00',
       name: 'serv00',
-      // `method` should be `TCP_PING` for tcp monitors
-      method: 'TCP_PING',
-      // `target` should be `host:port` for tcp monitors
-      target: 'web4.serv00.com:22',
-      timeout: 5000,
+      method: 'GET',
+      target: 'https://web4.serv00.com',
+      expectedCodes: [200, 404, 526, 530],
     },
   ],
   notification: {

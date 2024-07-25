@@ -45,7 +45,7 @@ resource "cloudflare_worker_cron_trigger" "uptimeflare_worker_cron" {
 resource "cloudflare_pages_project" "uptimeflare" {
   account_id        = var.CLOUDFLARE_ACCOUNT_ID
   name              = "uptimeflare"
-  production_branch = "main"
+  production_branch = "weidows"
 
   deployment_configs {
     production {
