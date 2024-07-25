@@ -86,6 +86,13 @@ const workerConfig = {
       statusPageLink: 'https://monitor.weidows.tech',
     },
     {
+      id: 'vaultwarden.weidows.tech',
+      name: 'vaultwarden',
+      method: 'GET',
+      target: 'https://vaultwarden.weidows.tech',
+      statusPageLink: 'https://vaultwarden.weidows.tech',
+    },
+    {
       id: 'nav.weidows.tech',
       name: 'nav',
       method: 'GET',
@@ -93,14 +100,56 @@ const workerConfig = {
       statusPageLink: 'https://nav.weidows.tech',
     },
     {
+      id: 'sink.weidows.tech',
+      name: 'sink 短连接平台',
+      method: 'GET',
+      target: 'https://sink.weidows.tech',
+      statusPageLink: 'https://sink.weidows.tech',
+    },
+    {
+      id: 'paperkite.bt.weidows.tech',
+      name: 'paperkite',
+      method: 'GET',
+      target: 'https://paperkite.bt.weidows.tech',
+      statusPageLink: 'https://paperkite.bt.weidows.tech',
+    },
+
+    // API
+    {
       id: 'apprise.weidows.tech',
       name: 'apprise',
       method: 'GET',
       target: 'https://apprise.weidows.tech',
       expectedCodes: [200, 404],
     },
+    {
+      id: 'referer.counter.weidows.tech',
+      name: 'referer.counter',
+      method: 'GET',
+      target: 'https://referer.counter.weidows.tech/@Weidows/Cloudflare/UptimeFlare',
+    },
+    {
+      id: 'moe.counter.weidows.tech',
+      name: 'moe.counter',
+      method: 'GET',
+      target: 'https://moe.counter.weidows.tech/@Weidows-Cloudflare-UptimeFlare?theme=rule34',
+    },
 
     // 自用代理
+    {
+      id: 'chatgpt.ai.weidows.tech',
+      name: 'chatgpt',
+      method: 'GET',
+      target: 'https://chatgpt.ai.weidows.tech',
+      // statusPageLink: 'https://chatgpt.ai.weidows.tech',
+    },
+    {
+      id: 'bing.ai.weidows.tech',
+      name: 'bing',
+      method: 'GET',
+      target: 'https://bing.ai.weidows.tech',
+      // statusPageLink: 'https://bing.ai.weidows.tech',
+    },
     {
       id: 'docker.hub.weidows.tech',
       name: 'docker mirror',
@@ -141,8 +190,8 @@ const workerConfig = {
       // `method` should be `TCP_PING` for tcp monitors
       method: 'TCP_PING',
       // `target` should be `host:port` for tcp monitors
-      target: 's4.serv00.com:22',
-      timeout: 10000,
+      target: 'web4.serv00.com:22',
+      timeout: 5000,
     },
   ],
   notification: {
