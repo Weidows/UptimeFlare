@@ -94,6 +94,20 @@ const workerConfig = {
       statusPageLink: 'https://vaultwarden.weidows.tech',
     },
     {
+      id: 'pan.weidows.tech',
+      name: 'alist',
+      method: 'GET',
+      target: 'https://pan.weidows.tech',
+      statusPageLink: 'https://pan.weidows.tech',
+    },
+    {
+      id: 'shop.weidows.tech',
+      name: '店铺',
+      method: 'GET',
+      target: 'https://shop.weidows.tech',
+      statusPageLink: 'https://shop.weidows.tech',
+    },
+    {
       id: 'nav.weidows.tech',
       name: 'nav',
       method: 'GET',
@@ -113,6 +127,13 @@ const workerConfig = {
       method: 'GET',
       target: 'https://paperkite.bt.weidows.tech',
       statusPageLink: 'https://paperkite.bt.weidows.tech',
+    },
+    {
+      id: 'psub.px.weidows.tech',
+      name: '加密订阅转换',
+      method: 'GET',
+      target: 'https://psub.px.weidows.tech',
+      statusPageLink: 'https://psub.px.weidows.tech',
     },
 
     // API
@@ -135,6 +156,12 @@ const workerConfig = {
       name: 'moe.counter',
       method: 'GET',
       target: 'https://moe.counter.weidows.tech/@Weidows-Cloudflare-UptimeFlare?theme=rule34',
+    },
+    {
+      id: 'cors.px.weidows.tech',
+      name: 'CORS proxy',
+      method: 'GET',
+      target: 'https://cors.px.weidows.tech',
     },
 
     // 自用代理
@@ -167,6 +194,13 @@ const workerConfig = {
       target: 'https://bili.px.weidows.tech',
       // statusPageLink: 'https://bili.px.weidows.tech',
     },
+    {
+      id: 'sub.px.weidows.tech',
+      name: '订阅聚合',
+      method: 'GET',
+      target: 'https://sub.px.weidows.tech',
+      // statusPageLink: 'https://sub.px.weidows.tech',
+    },
 
     // others
     // ========================================================================
@@ -198,10 +232,24 @@ const workerConfig = {
     // },
     {
       id: 'weidows@serv00',
-      name: 'serv00',
+      name: 'serv01',
       method: 'GET',
       target: 'https://web4.serv00.com',
       expectedCodes: [200, 404, 526, 530],
+    },
+    {
+      id: 'Gresham@serv00',
+      name: 'serv02-px',
+      method: 'GET',
+      target: 'https://gresham.serv00.net/info',
+      statusPageLink: 'https://gresham.serv00.net/status',
+    },
+    {
+      id: 'Barnhart@serv00',
+      name: 'serv03-px',
+      method: 'GET',
+      target: 'https://barnhart.serv00.net/info',
+      statusPageLink: 'https://barnhart.serv00.net/status',
     },
   ],
   notification: {
