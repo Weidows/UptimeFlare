@@ -67,7 +67,7 @@ const workerConfig = {
     // ========================================================================
     {
       id: 'home.weidows.tech',
-      name: 'homepage',
+      name: 'home.weidows.tech',
       method: 'GET',
       target: 'https://home.weidows.tech',
       statusPageLink: 'https://home.weidows.tech',
@@ -80,29 +80,22 @@ const workerConfig = {
       statusPageLink: 'https://blog.weidows.tech',
     },
     {
-      id: 'monitor.weidows.tech',
-      name: 'monitor',
-      method: 'GET',
-      target: 'https://monitor.weidows.tech',
-      statusPageLink: 'https://monitor.weidows.tech',
-    },
-    {
       id: 'vaultwarden.weidows.tech',
-      name: 'vaultwarden',
+      name: 'vaultwarden 自建密码管理平台',
       method: 'GET',
       target: 'https://vaultwarden.weidows.tech',
       statusPageLink: 'https://vaultwarden.weidows.tech',
     },
     {
       id: 'pan.weidows.tech',
-      name: 'alist',
+      name: 'alist 个人网盘',
       method: 'GET',
       target: 'https://pan.weidows.tech',
       statusPageLink: 'https://pan.weidows.tech',
     },
     {
       id: 'shop.weidows.tech',
-      name: '店铺',
+      name: 'shop',
       method: 'GET',
       target: 'https://shop.weidows.tech',
       statusPageLink: 'https://shop.weidows.tech',
@@ -123,7 +116,7 @@ const workerConfig = {
     },
     {
       id: 'paperkite.bt.weidows.tech',
-      name: 'paperkite',
+      name: 'paperkite BT搜索',
       method: 'GET',
       target: 'https://paperkite.bt.weidows.tech',
       statusPageLink: 'https://paperkite.bt.weidows.tech',
@@ -140,26 +133,26 @@ const workerConfig = {
     // ========================================================================
     {
       id: 'apprise.weidows.tech',
-      name: 'apprise',
+      name: 'apprise 个人信息推送聚合',
       method: 'GET',
       target: 'https://apprise.weidows.tech',
       expectedCodes: [200, 404],
     },
     {
       id: 'referer.counter.weidows.tech',
-      name: 'referer.counter',
+      name: 'referer.counter 访问计数',
       method: 'GET',
       target: 'https://referer.counter.weidows.tech/@Weidows/Cloudflare/UptimeFlare',
     },
     {
       id: 'moe.counter.weidows.tech',
-      name: 'moe.counter',
+      name: 'moe.counter 访问计数',
       method: 'GET',
       target: 'https://moe.counter.weidows.tech/@Weidows-Cloudflare-UptimeFlare?theme=rule34',
     },
     {
       id: 'cors.px.weidows.tech',
-      name: 'CORS proxy',
+      name: 'CORS-proxy',
       method: 'GET',
       target: 'https://cors.px.weidows.tech',
     },
@@ -182,14 +175,14 @@ const workerConfig = {
     },
     {
       id: 'docker.hub.weidows.tech',
-      name: 'docker mirror',
+      name: 'docker-mirror',
       method: 'GET',
       target: 'https://docker.hub.weidows.tech',
       // statusPageLink: 'https://docker.hub.weidows.tech',
     },
     {
       id: 'bili.px.weidows.tech',
-      name: 'bili server',
+      name: 'bili-server',
       method: 'GET',
       target: 'https://bili.px.weidows.tech',
       // statusPageLink: 'https://bili.px.weidows.tech',
@@ -210,13 +203,6 @@ const workerConfig = {
       method: 'GET',
       target: 'https://weidows.github.io',
       statusPageLink: 'https://weidows.github.io',
-    },
-    {
-      id: 'weidows-projects.github.io/Keeper',
-      name: 'Keeper-ssl-check',
-      method: 'GET',
-      target: 'https://weidows-projects.github.io/Keeper/',
-      statusPageLink: 'https://weidows-projects.github.io/Keeper/',
     },
 
     // server
@@ -265,7 +251,7 @@ const workerConfig = {
     // [Optional] grace period in minutes before sending a notification
     // notification will be sent only if the monitor is down for N continuous checks after the initial failure
     // if not specified, notification will be sent immediately
-    gracePeriod: 5,
+    gracePeriod: 1,
   },
   callbacks: {
     onStatusChange: async (
