@@ -200,6 +200,13 @@ const workerConfig = {
 
     // server
     // ========================================================================
+    {
+      id: 'serv00.monitor.weidows.tech',
+      name: '服务监控',
+      method: 'GET',
+      target: 'https://serv00.monitor.weidows.tech',
+      // statusPageLink: 'https://serv00.monitor.weidows.tech',
+    },
     // {
     //   id: 'weidows@serv00',
     //   name: 'serv00',
@@ -244,7 +251,7 @@ const workerConfig = {
     // [Optional] grace period in minutes before sending a notification
     // notification will be sent only if the monitor is down for N continuous checks after the initial failure
     // if not specified, notification will be sent immediately
-    gracePeriod: 1,
+    // gracePeriod: 1,
   },
   callbacks: {
     onStatusChange: async (
