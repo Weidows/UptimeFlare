@@ -153,27 +153,6 @@ const workerConfig = {
     // 自用代理
     // ========================================================================
     {
-      id: 'chatgpt.ai.weidows.tech',
-      name: 'chatgpt',
-      method: 'GET',
-      target: 'https://chatgpt.ai.weidows.tech',
-      // statusPageLink: 'https://chatgpt.ai.weidows.tech',
-    },
-    {
-      id: 'bing.ai.weidows.tech',
-      name: 'bing',
-      method: 'GET',
-      target: 'https://bing.ai.weidows.tech',
-      // statusPageLink: 'https://bing.ai.weidows.tech',
-    },
-    {
-      id: 'docker.hub.weidows.tech',
-      name: 'docker-mirror',
-      method: 'GET',
-      target: 'https://docker.hub.weidows.tech',
-      // statusPageLink: 'https://docker.hub.weidows.tech',
-    },
-    {
       id: 'bili.px.weidows.tech',
       name: 'bili-server',
       method: 'GET',
