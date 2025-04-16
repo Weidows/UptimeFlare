@@ -15,8 +15,22 @@ const pageConfig = {
   // If not specified, all monitors will be shown in a single list
   // If specified, monitors will be grouped and ordered, not-listed monitors will be invisble (but still monitored)
   group: {
-    '🌐 Public (example group name)': ['foo_monitor', 'bar_monitor', 'more monitor ids...'],
-    '🔐 Private': ['test_tcp_monitor'],
+    '🌐 Public (weidows.tech)': [
+      'blog.weidows.tech',
+      'vaultwarden.weidows.tech',
+      'pan.weidows.tech',
+      'sink.weidows.tech',
+      'psub.px.weidows.tech',
+    ],
+    // API
+    '💻 API': [
+      'apprise.weidows.tech',
+      'referer.counter.weidows.tech',
+      'moe.counter.weidows.tech',
+      'cors.px.weidows.tech',
+    ],
+    // px
+    '🐱 px': ['bili.px.weidows.tech', 'sub.px.weidows.tech'],
   },
 }
 
@@ -82,13 +96,6 @@ const workerConfig = {
     // weidows.tech
     // ========================================================================
     {
-      id: 'weidows.tech',
-      name: 'weidows.tech | 主页 - 网址导航',
-      method: 'GET',
-      target: 'https://weidows.tech',
-      statusPageLink: 'https://weidows.tech',
-    },
-    {
       id: 'blog.weidows.tech',
       name: 'blog.weidows.tech | 博客',
       method: 'GET',
@@ -99,8 +106,8 @@ const workerConfig = {
       id: 'vaultwarden.weidows.tech',
       name: 'vaultwarden | 自建密码管理平台',
       method: 'GET',
-      target: 'https://vaultwarden.weidows.tech',
-      statusPageLink: 'https://vaultwarden.weidows.tech',
+      target: 'https://vaultwarden-web-dolphin-sound.weidows.tech',
+      statusPageLink: 'https://vaultwarden-web-dolphin-sound.weidows.tech',
     },
     {
       id: 'pan.weidows.tech',
@@ -110,25 +117,11 @@ const workerConfig = {
       statusPageLink: 'https://pan.weidows.tech',
     },
     {
-      id: 'shop.weidows.tech',
-      name: 'shop | 商店',
-      method: 'GET',
-      target: 'https://shop.weidows.tech',
-      statusPageLink: 'https://shop.weidows.tech',
-    },
-    {
       id: 'sink.weidows.tech',
       name: 'sink | 短连接平台',
       method: 'GET',
       target: 'https://sink.weidows.tech',
       statusPageLink: 'https://sink.weidows.tech',
-    },
-    {
-      id: 'paperkite.bt.weidows.tech',
-      name: 'paperkite | BT搜索',
-      method: 'GET',
-      target: 'https://paperkite.bt.weidows.tech',
-      statusPageLink: 'https://paperkite.bt.weidows.tech',
     },
     {
       id: 'psub.px.weidows.tech',
@@ -185,53 +178,23 @@ const workerConfig = {
 
     // others
     // ========================================================================
-    {
-      id: 'weidows.github.io',
-      name: 'weidows.github.io',
-      method: 'GET',
-      target: 'https://weidows.github.io',
-      statusPageLink: 'https://weidows.github.io',
-    },
+    // {
+    //   id: 'weidows.github.io',
+    //   name: 'weidows.github.io',
+    //   method: 'GET',
+    //   target: 'https://weidows.github.io',
+    //   statusPageLink: 'https://weidows.github.io',
+    // },
 
     // server
     // ========================================================================
-    {
-      id: 'serv00.monitor.weidows.tech',
-      name: '服务监控',
-      method: 'GET',
-      target: 'https://serv00.monitor.weidows.tech',
-      // statusPageLink: 'https://serv00.monitor.weidows.tech',
-    },
     // {
-    //   id: 'weidows@serv00',
-    //   name: 'serv00',
-    //   // `method` should be `TCP_PING` for tcp monitors
-    //   method: 'TCP_PING',
-    //   // `target` should be `host:port` for tcp monitors
-    //   target: 'web4.serv00.com:80',
-    //   timeout: 5000,
+    //   id: 'Gresham@serv00',
+    //   name: 'serv2-px',
+    //   method: 'GET',
+    //   target: 'https://gresham.serv00.net/info',
+    //   // statusPageLink: 'https://gresham.serv00.net/status',
     // },
-    {
-      id: 'weidows@serv00',
-      name: 'serv1',
-      method: 'GET',
-      target: 'https://web4.serv00.com',
-      expectedCodes: [200, 404, 526, 530],
-    },
-    {
-      id: 'Gresham@serv00',
-      name: 'serv2-px',
-      method: 'GET',
-      target: 'https://gresham.serv00.net/info',
-      // statusPageLink: 'https://gresham.serv00.net/status',
-    },
-    {
-      id: 'Barnhart@serv00',
-      name: 'serv3-px',
-      method: 'GET',
-      target: 'https://barnhart.serv00.net/info',
-      // statusPageLink: 'https://barnhart.serv00.net/status',
-    },
   ],
   notification: {
     // [Optional] apprise API server URL
