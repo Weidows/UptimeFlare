@@ -1,3 +1,8 @@
+<div align="right">
+  <a title="English" href="README.md"><img src="https://img.shields.io/badge/-English-A31F34?style=for-the-badge" alt="English" /></a>
+  <a title="简体中文" href="README_zh-CN.md"><img src="https://img.shields.io/badge/-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-545759?style=for-the-badge" alt="简体中文"></a>
+</div>
+
 # ✔[UptimeFlare](https://github.com/lyc8503/UptimeFlare)
 
 A more advanced, serverless, and free uptime monitoring & status page solution, powered by Cloudflare Workers, complete with a user-friendly interface.
@@ -18,6 +23,8 @@ A more advanced, serverless, and free uptime monitoring & status page solution, 
   - Responsive UI that adapts to your system theme
   - Customizable status page
   - Use your own domain with CNAME
+  - Optional password authentication (private status page)
+  - JSON API for fetching realtime status data
 
 ## 👀Demo
 
@@ -42,6 +49,12 @@ Please refer to [Wiki](https://github.com/lyc8503/UptimeFlare/wiki)
 - [x] Improve docs by providing simple examples
 - [x] Notification grace period
 - [ ] SSL certificate checks
-- [ ] Self-host Dockerfile
-- [ ] Incident timeline
+- [x] ~~Self-host Dockerfile~~
+- [x] Incident history
+- [x] Improve `checkLocationWorkerRoute` and fix possible `proxy failed`
+- [x] Groups 
 - [x] Remove old incidents
+- [x] ~~Known issue~~: `fetch` doesn't support non-standard port (resolved after CF update)
+- [ ] Compatibility date update
+- [ ] Update wiki and add docs for dev
+- [ ] Cloudflare D1 database
