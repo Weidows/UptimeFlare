@@ -106,8 +106,8 @@ const workerConfig = {
       id: 'vaultwarden.weidows.tech',
       name: 'vaultwarden | 自建密码管理平台',
       method: 'GET',
-      target: 'https://vaultwarden-web-dolphin-sound.weidows.tech',
-      statusPageLink: 'https://vaultwarden-web-dolphin-sound.weidows.tech',
+      target: 'https://vaultwarden.weidows.tech',
+      statusPageLink: 'https://vaultwarden.weidows.tech',
     },
     {
       id: 'pan.weidows.tech',
