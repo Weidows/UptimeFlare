@@ -103,13 +103,6 @@ const workerConfig = {
       statusPageLink: 'https://blog.weidows.tech',
     },
     {
-      id: 'vaultwarden.weidows.tech',
-      name: 'vaultwarden | 自建密码管理平台',
-      method: 'GET',
-      target: 'https://vaultwarden.weidows.tech',
-      statusPageLink: 'https://vaultwarden.weidows.tech',
-    },
-    {
       id: 'pan.weidows.tech',
       name: 'alist | 个人网盘',
       method: 'GET',
@@ -122,13 +115,6 @@ const workerConfig = {
       method: 'GET',
       target: 'https://sink.weidows.tech',
       statusPageLink: 'https://sink.weidows.tech',
-    },
-    {
-      id: 'psub.px.weidows.tech',
-      name: 'psub.px.weidows.tech | 加密订阅转换',
-      method: 'GET',
-      target: 'https://psub.px.weidows.tech',
-      statusPageLink: 'https://psub.px.weidows.tech',
     },
 
     // API
@@ -145,6 +131,7 @@ const workerConfig = {
       name: 'referer.counter | SVG 访问计数',
       method: 'GET',
       target: 'https://referer.counter.weidows.tech/@Weidows/Cloudflare/UptimeFlare',
+      timeout: 30000,
     },
     {
       id: 'moe.counter.weidows.tech',
